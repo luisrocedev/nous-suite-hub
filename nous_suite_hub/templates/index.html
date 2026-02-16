@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nous Suite Hub</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Nous Suite Hub</h1>
+      <p>Integración de módulos independientes en suites empresariales de alto impacto</p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Catálogo modular</h2>
+      <div class="tools-row">
+        <select id="family-filter"></select>
+        <button id="btn-reload" class="btn">Recargar</button>
+      </div>
+      <div id="module-list" class="module-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Diseñador de suites</h2>
+      <div class="form-grid">
+        <input id="suite-name" placeholder="Nombre de la suite" />
+        <input id="suite-owner" placeholder="Responsable" />
+        <textarea id="suite-mission" rows="3" placeholder="Misión de negocio"></textarea>
+        <button id="btn-create-suite" class="btn-primary">Crear suite</button>
+      </div>
+
+      <h3>Suites existentes</h3>
+      <div id="suite-list" class="suite-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Detalle y simulación</h2>
+      <div id="detail-empty" class="empty">Selecciona una suite para asociar módulos y simular ROI.</div>
+      <div id="suite-detail" class="hidden">
+        <div id="suite-title" class="suite-title"></div>
+        <div id="suite-metrics" class="metrics"></div>
+        <div class="actions-row">
+          <button id="btn-save-links" class="btn">Guardar módulos seleccionados</button>
+          <button id="btn-simulate" class="btn-primary">Simular integración</button>
+        </div>
+        <h3>Histórico de simulaciones</h3>
+        <div id="run-list" class="run-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
